@@ -4,9 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Game Sphere</title>
 </head>
+
 <body>
-    <div id="greet">{{message}}</div>
+    <header>
+        <h1>Game Sphere</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        {{# if loggedIn}}
+        <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
+    </nav>
+    <main>
+        <div class="categories">
+            <button id="action">Action</button>
+            <button id="adventure">Adventure</button>
+            <button id="horror">Horror</button>
+            <button id="puzzle">Puzzle</button>
+            <button id="mmo">MMO</button>
+            <button id="rpg">RPG</button>
+            <button id="survival">Survival</button>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="post">
+            <button id="create-post">Create Post</button>
+            {{{body}}}
+        </div>
+    </main>
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
+<footer>
+    <h2>The Creators</h2>
+    <p>Andrew Eysoldt</p>
+    <a href="https://github.com/Pogga1">Andrew's Github</a>
+    <p>Gayle Hoefer</p>
+    <a href="https://github.com/hoeferg">Gayle's Github</a>
+    <p>Joy Haliday</p>
+    <a href="https://github.com/joyhalliday">Joy's Github</a>
+    <p>Cole Sexson</p>
+    <a href="https://github.com/ColeS82">Cole's Github</a>
+    <p>Trevor Dorn</p>
+    <a href="https://github.com/dorntrevor7">Trevor's Github</a>
+</footer>
 </html>
