@@ -12,16 +12,12 @@ const router = require("express").Router();
 router.get("/", (req, res) => {
   // If a session exists, redirect the request to the homepage
   console.log(req, res);
-  res.render("layouts/coleTestMain", {
-    title: "hello",
-    message: "Cole and I, Wassup?",
+  res.render("layouts/Main", {
+    message: "Welcome to GameSphere!",
   });
 });
 
-router.post("/", (req, res) => {
-  // If a session exists, redirect the request to the homepage
-  res.render("coleTest", { message: "Cole and I, Wassup #2 ?" });
-});
+
 
 // router.post("/", (req, res) => {
 
