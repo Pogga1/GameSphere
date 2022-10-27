@@ -1,5 +1,9 @@
 # Gamesphere
-  ## https://github.com/Pogga1 , hoeferg , dorntrevor7 , joyhalliday , csexson81 /Gamesphere
+  ## https://github.com/Pogga1/Gamesphere
+  https://github.com/hoefergGamesphere
+  https://github.com/dorntrevor7/Gamesphere
+  https://github.com/joyhalliday/Gamesphere
+  https://github.com/csexson81/Gamesphere
  
   A hub where game and game enthusiasts can gather to talk about their gaming passions, questions, and news.
 # Table of Contents
