@@ -25,6 +25,6 @@ Internet Connection
   # Contributions
   Contributors: Andrew Eysoldt, Cole Sexson, Gayle Hoefer, Joy Halliday, Trevor Dorn
   # Tests
-  The following is needed to run tests: We seeded data into the database and utilized all of the elements we offer in our application to make sure that everything functions properly and is optimal for the user.
+  We seeded data into the database and utilized all of the elements we offer in our application to make sure that everything functions properly and is optimal for the user.
   # Questions
   If you have any questions about the repository contact Andrew Eysoldt, Cole Sexson, Gayle Hoefer, Joy Halliday, Trevor Dorn directly at : Andreweysoldt@gmail.com , gaylehoefer@gmail.com , dorntrevorr7@gmail.com , tjoyhalliday@gmail.com , csexson82@gmail.com.
