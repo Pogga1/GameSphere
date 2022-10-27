@@ -1,0 +1,34 @@
+{
+  "name": "gamesphere",
+  "version": "1.0.0",
+  "description": "A hub where people who enjoy games can discuss their views and passions related to gaming.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seeds": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pogga1/GameSphere.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pogga1/GameSphere/issues"
+  },
+  "homepage": "https://github.com/Pogga1/GameSphere#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-session-sequelize": "^7.1.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "mysql2": "^2.3.3",
+    "node": "^19.0.0",
+    "npm": "^8.19.2",
+    "sequelize": "^6.25.3"
+  }
+}
