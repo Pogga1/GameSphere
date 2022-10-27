@@ -18,9 +18,7 @@ router.get("/", async (req, res) => {
       //  model: User,
       //   },
       // ],
-
     });
-
     const post = dbgamesphereData.map((post) =>
       post.get({ plain: true })
     );
