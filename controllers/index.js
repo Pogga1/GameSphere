@@ -1,6 +1,10 @@
-const router = require('express').Router();
-const userRoutes = require('./userRoutes');
+// gameSphere_db
+const router = require("express").Router();
 
-router.use('/users', userRoutes);
+const apiRoutes = require("./api");
+const homeRoutes = require("./homeRoutes");
+
+router.use("/api", apiRoutes);
+router.use("/", homeRoutes);
 
 module.exports = router;
