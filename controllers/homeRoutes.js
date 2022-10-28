@@ -1,5 +1,5 @@
 const router = require("express").Router();
-// const { User } = require('../models');
+const { Post } = require('../models');
 // const withAuth = require('../utils/auth');
 
 // router.post("/", (req, res) => {
@@ -9,12 +9,30 @@ const router = require("express").Router();
 //     message: "Cole and I, Wassup?",
 //   });
 // });
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   // If a session exists, redirect the request to the homepage
-  console.log(req, res);
-  res.render("layouts/Main", {
-    message: "Welcome to GameSphere!",
-  });
+  try {
+    const dbgamesphereData = await Post.findAll({
+      // include: [
+      //   {
+      //  model: User,
+      //   },
+      // ],
+
+    });
+
+    const post = dbgamesphereData.map((post) =>
+      post.get({ plain: true })
+    );
+    console.log(req, res);
+    res.render("homepage", {
+      post,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 
