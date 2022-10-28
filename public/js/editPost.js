@@ -2,10 +2,12 @@
 
 const editPostForm = async event => {
 event.preventDefault();
-const title = document.querySelector('input[name="title"]').value.trim();
-const content = document.querySelector('input[name="content"]').value.trim();
+const post_title = document.querySelector('input[name="title"]').value.trim();
+const genre = document.querySelector('input[name="genre"]').value.trim();
+const post_body = document.querySelector('input[name="content"]').value.trim();
 
-const id = window.location.toString().split('/')[
+
+const post_id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];
 
@@ -37,7 +39,7 @@ document.querySelector('#edit-post')
 const deletePost = async event =>{
     event.preventDefault();
 
-    const postId = window.location.toString().split("/")[
+    const post_id = window.location.toString().split("/")[
         window.location.toString().split("/").length - 1
       ];
 
