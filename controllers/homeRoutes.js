@@ -1,15 +1,6 @@
 const router = require("express").Router();
 const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
-// const withAuth = require('../utils/auth');
-
-// router.post("/", (req, res) => {
-//   // If a session exists, redirect the request to the homepage
-//   res.render("coleTest", {
-//     title: "hello",
-//     message: "Cole and I, Wassup?",
-//   });
-// });
 
 
 router.get('/', async (req, res) => {
@@ -34,8 +25,10 @@ router.get('/', async (req, res) => {
 
 
 router.get('/login',(req, res) => 
-{if (req.session.logged_in) {res.redirect('/');
-return} res.render('login')}
+{if (req.session.logged_in) {
+  res.redirect('/');
+return} 
+res.render('login')}
 )
 
 
