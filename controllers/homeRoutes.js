@@ -12,16 +12,14 @@ const { Post } = require('../models');
 router.get("/", async (req, res) => {
   // If a session exists, redirect the request to the homepage
   try {
-    const dbgamesphereData = await Post.findAll({
+    const userData = await Post.findAll({
       // include: [
       //   {
       //  model: User,
       //   },
       // ],
-
     });
-
-    const post = dbgamesphereData.map((post) =>
+    const post = userData.map((post) =>
       post.get({ plain: true })
     );
     console.log(req, res);
