@@ -14,6 +14,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 * [Contributing](#contributions)
 * [Tests](#test)
+* [Technologies-used](#Technologies Used)
 * [Questions](#questions)
 # Installation
 * there are no steps involved to install this webpage
