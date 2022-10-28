@@ -33,20 +33,23 @@ router.get('/', async (req, res) => {
 
 
 
-router.get('/login',(req, res) => 
-{if (req.session.logged_in) {res.redirect('/');
-return} res.render('login')}
+router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return
+  } res.render('login')
+}
 )
 
 
 router.get('/post/:id', async (req, res) => {
-try {
-  const postData = await Post.findByPk(req.params.id, {include:[{model: User, attributes: ['username'], },{model: Comment, include:[User], }, ], });
-  const post = postData.get({plain:true});
-  res.render('post',{...post, logged_in:req.session.logged_in, });
-}catch(err){
-  res.status(500).JSON(err);
-}
+  try {
+    const postData = await Post.findByPk(req.params.id, { include: [{ model: User, attributes: ['username'], }, { model: Comment, include: [User], },], });
+    const post = postData.get({ plain: true });
+    res.render('post', { ...post, logged_in: req.session.logged_in, });
+  } catch (err) {
+    res.status(500).JSON(err);
+  }
 });
 
 
@@ -78,8 +81,30 @@ try {
 
 
 
-// router.post("/", (req, res) => {
-
-// });
+router.get("/user-page", async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.session.user_id || 1, {
+      include: [{
+        model: Post,
+        // good location to include comments inclyde mode comments
+        include: [{
+          model: Comment
+        }]
+      }]
+    });
+    if (!userData)
+      return res.json("no user data");
+    const user = userData.get({
+      plain: true,
+    })
+    console.log(user)
+    res.render("user-page", {
+      logged_in: req.session.logged_in,
+      user
+    })
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
