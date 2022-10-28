@@ -1,8 +1,4 @@
-{{!-- {{#each post as |post|}}
-{{!-- {{> post-details}} --}}
-{{!-- {{/each}} --}} 
-
-
-
-
-<loggedIn-HOMEPAGE
+{{>page-setup}}
+{{#each post as |post|}}
+{{> post-details}}
+{{/each}}

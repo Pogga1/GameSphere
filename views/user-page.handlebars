@@ -1,6 +1,13 @@
 <div>
-{{#if loggedIn}}
-{{!-- create the rest of look for when the user is viewing their account info. --}}
-<h2>{{{user.username}}}</h2>
-<ul>{{{user.post}}}</ul>
+    <p>test</p>
+    {{!-- {{#if logged_in}} --}}
+    {{!-- create the rest of look for when the user is viewing their account info. --}}
+    <h2>{{user.username}}</h2>
+    <p>this is screat </p>
+    <ul>
+        {{#each user.posts as |post|}}
+        {{post.content}}
+        {{/each}}
+    </ul>
 </div>
+{{!-- {{/if}} --}}
