@@ -5,12 +5,26 @@
     {{#if loggedIn}}
     <section class="flex-row justify-center">
         {{#each user.post as |post|}}
-        {{> post-details}}
+        {{!-- {{> post-details}} --}}
         {{/each}}
     </section>
     <section>
         <h4>Comments</h4>
-        <p>{{user.comment<}}</p>
+        <p>{{user.comment<}}< /p>
+                <div class="">
+                    <div class="comment-card">
+                        <h2 class="comment">Create your comment</h2>
+                        <form class="form comment-form">
+                            <div class="form-group">
+                                <label for="comment">Comment:</label>
+                                <input class="form-input" type="text" id="comment" />
+                            </div>
+                            <div class="form-group">
+                                <button class="" type="submit">Submit Comment</button>
+                            </div>
+                    </div>
+                </div>
+                </form>
     </section>
 </section>
 {{else}}

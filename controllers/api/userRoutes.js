@@ -37,13 +37,17 @@ router.post("/login", async (req, res) => {
   }
 });
 
-
-
-
-
-
-
-
+router.post("/signup", (req, res) => {
+  try {
+    const newUserData = User.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
+    res.status(200).json(newUserData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
 // router.get("/login:id, async (req, res) => {
 //   try {
@@ -57,7 +61,7 @@ router.post("/login", async (req, res) => {
 //     }
 // // if loggin in true render home page else render login page
 //     // Verify the posted password with the password store in the database
-    
+
 //     }
 
 //     // Create session variables based on the logged in user

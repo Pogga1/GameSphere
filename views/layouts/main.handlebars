@@ -18,40 +18,9 @@
         {{else}}
         <a href="/login">Login</a>
         {{/if}}
+        {{#if loggedIn}}
+        <script src="/js/logout.js"></script>
+        {{/if}}
     </nav>
-    <main>
-        <div class="categories">
-            <button id="action">Action</button>
-            <button id="adventure">Adventure</button>
-            <button id="horror">Horror</button>
-            <button id="puzzle">Puzzle</button>
-            <button id="mmo">MMO</button>
-            <button id="rpg">RPG</button>
-            <button id="survival">Survival</button>
-        </div>
-        <div class="search">
-            <input type="text" placeholder="Search...">
-        </div>
-        <div class="post">
-            <button id="create-post">Create Post</button>
-            {{{body}}}
-        </div>
-    </main>
-    {{#if loggedIn}}
-    <script src="/js/logout.js"></script>
-    {{/if}}
-</body>
-<footer>
-    <h2>The Creators</h2>
-    <p>Andrew Eysoldt</p>
-    <a href="https://github.com/Pogga1">Andrew's Github</a>
-    <p>Gayle Hoefer</p>
-    <a href="https://github.com/hoeferg">Gayle's Github</a>
-    <p>Joy Haliday</p>
-    <a href="https://github.com/joyhalliday">Joy's Github</a>
-    <p>Cole Sexson</p>
-    <a href="https://github.com/ColeS82">Cole's Github</a>
-    <p>Trevor Dorn</p>
-    <a href="https://github.com/dorntrevor7">Trevor's Github</a>
-</footer>
+    {{{body}}}
 </html>
