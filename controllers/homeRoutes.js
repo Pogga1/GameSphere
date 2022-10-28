@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const { Post, User, Comment } = require('../models');
-const withAuth = require('../utils/auth');
+const { Post, User, Comment } = require("../models");
+const withAuth = require("../utils/auth");
 // const withAuth = require('../utils/auth');
 
 // router.post("/", (req, res) => {
@@ -11,17 +11,15 @@ const withAuth = require('../utils/auth');
 //   });
 // });
 
-
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+      attributes: { exclude: ["password"] },
     });
 
     const users = userData.map((post) => post.get({ plain: true }));
 
-    res.render('homepage', {
+    res.render("homepage", {
       users,
       // Pass the logged in flag to the template
       logged_in: req.session.logged_in,
@@ -31,27 +29,28 @@ router.get('/', async (req, res) => {
   }
 });
 
-
-
-router.get('/login', (req, res) => {
+router.get("/login", (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/');
-    return
-  } res.render('login')
-}
-)
+    res.redirect("/");
+    return;
+  }
+  res.render("login");
+});
 
-
-router.get('/post/:id', async (req, res) => {
+router.get("/post/:id", async (req, res) => {
   try {
-    const postData = await Post.findByPk(req.params.id, { include: [{ model: User, attributes: ['username'], }, { model: Comment, include: [User], },], });
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        { model: User, attributes: ["username"] },
+        { model: Comment, include: [User] },
+      ],
+    });
     const post = postData.get({ plain: true });
-    res.render('post', { ...post, logged_in: req.session.logged_in, });
+    res.render("post", { ...post, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).JSON(err);
   }
 });
-
 
 // router.get("/", async (req, res) => {
 //   // If a session exists, redirect the request to the homepage
@@ -79,32 +78,7 @@ router.get('/post/:id', async (req, res) => {
 //   }
 // });
 
-
-
-router.get("/user-page", async (req, res) => {
-  try {
-    const userData = await User.findByPk(req.session.user_id || 1, {
-      include: [{
-        model: Post,
-        // good location to include comments inclyde mode comments
-        include: [{
-          model: Comment
-        }]
-      }]
-    });
-    if (!userData)
-      return res.json("no user data");
-    const user = userData.get({
-      plain: true,
-    })
-    console.log(user)
-    res.render("user-page", {
-      logged_in: req.session.logged_in,
-      user
-    })
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// router.post("/", (req, res) => {
+// });
 
 module.exports = router;

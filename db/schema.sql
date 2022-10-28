@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS  gameSphere_db;
+DROP DATABASE IF EXISTS  gamesphere_db;
 
-CREATE DATABASE  gameSphere_db;
+CREATE DATABASE  gamesphere_db;
