@@ -2,7 +2,6 @@ const router = require("express").Router();
 const { User } = require("../../models");
 
 // /api/users/login
-
 router.post("/login", async (req, res) => {
   try {
     // Find the user who matches the posted e-mail address
