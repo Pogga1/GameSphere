@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Sphere</title>
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+<link href="../../public/css/style.css" rel = 'stylesheet'>
 </head>
 
 <body>
     <header>
-        <h1>Game Sphere</h1>
+        <h1 class="flex justify-center">Game Sphere</h1>
     </header>
     <nav>
-        <a href="/">Home</a>
+        <a href="/" class=" flex justify-around mx-5">Home</a>
         {{#if loggedIn}}
         <button id="logout" class="">Logout</button>
         {{else}}
-        <a href="/login">Login</a>
+        <a href="/login" class="flex justify-around mx-5">Login</a>
         {{/if}}
         {{#if loggedIn}}
         <script src="/js/logout.js"></script>
