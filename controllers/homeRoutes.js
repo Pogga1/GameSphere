@@ -20,7 +20,9 @@ router.get("/", async (req, res) => {
       // ],
     });
 
-    const post = dbgamesphereData.map((post) => post.get({ plain: true }));
+    const post = userData.map((post) => post.get({ plain: true }));
+    console.log(req, res);
+
     res.render("homepage", {
       post,
       loggedIn: req.session.loggedIn,
