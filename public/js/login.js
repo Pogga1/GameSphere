@@ -11,9 +11,10 @@ const loginForm = async (event) => {
       headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
+      console.log("logged in")
       document.location.replace("/");
     } else {
-      alert(res.statusText);
+      alert(response.statusText);
     }
   }
 };
