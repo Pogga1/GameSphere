@@ -1,7 +1,8 @@
 <section class="card">
     <a href="/post/{{id}}">
         {{#each post as |post|}}
-        {{> post-details}}
+        {{>post-details}}
+        <button id="edit-post">Edit Post</button>
         {{/each}}
         </div>
     </a>

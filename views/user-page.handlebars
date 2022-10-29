@@ -1,13 +1,14 @@
 <div>
-    <p>test</p>
-    {{!-- {{#if logged_in}} --}}
-    {{!-- create the rest of look for when the user is viewing their account info. --}}
+    {{#if logged_in}} --}}
+    create the rest of look for when the user is viewing their account info.
     <h2>{{user.username}}</h2>
-    <p>this is screat </p>
     <ul>
         {{#each user.posts as |post|}}
         {{post.content}}
         {{/each}}
     </ul>
 </div>
-{{!-- {{/if}} --}}
+{{/if}}
+
+<script src="./js/newPost.js"></script>
+<script src="./js/editPost.js"></script>
