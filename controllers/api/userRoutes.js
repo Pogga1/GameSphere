@@ -49,30 +49,6 @@ router.post("/signup", (req, res) => {
   }
 });
 
-// router.get("/login:id, async (req, res) => {
-//   try {
-//     // Find the user who matches the posted e-mail address
-//     const userData = await User.findOne({ where: { id: req.body.id } });
-
-//     if (req.session.logged_in = true) {
-//         .status(400)
-//         .json({ message: "Incorrect email or password, please try again" });
-//       return;
-//     }
-// // if loggin in true render home page else render login page
-//     // Verify the posted password with the password store in the database
-
-//     }
-
-//     // Create session variables based on the logged in user
-//     You are now logged in!" });
-//     });
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
-// })
-
 router.post("/logout", (req, res) => {
   if (req.session.logged_in) {
     // Remove the session variables
