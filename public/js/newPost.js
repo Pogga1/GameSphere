@@ -1,4 +1,4 @@
- 
+
 const postForm = async event => {
     event.preventDefault();
 
@@ -7,21 +7,21 @@ const postForm = async event => {
 
     const response = await fetch('/api/post', {
         method: 'POST',
-        body: JSON.stringify({  
+        body: JSON.stringify({
             post_id,
-            post_title, 
-            post_body, 
+            post_title,
+            post_body,
             genre,
-        }), 
+        }),
         headers: {
             'Content-Type': 'application/json'
         },
     });
-    if (response.ok){
+    if (response.ok) {
         document.location.replace('/')
     } else {
         alert(response.statusText)
     }
 };
 document.querySelector('#new-post')
-.addEventListener('click', postForm)
+    .addEventListener('click', postForm)

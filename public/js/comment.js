@@ -3,8 +3,8 @@ async function commentForm(event) {
   const comment_text = document.querySelector('input[name = "comment-info"]').value.trim();
 
 
-   const postId = window.location.toString().split("/")[
-    window.location.toString().split("/").length -1];
+  const postId = window.location.toString().split("/")[
+    window.location.toString().split("/").length - 1];
 
   if (comment_text) {
     const response = await fetch(`/api/comment/${postId}`, {
@@ -17,7 +17,7 @@ async function commentForm(event) {
         "Content-Type": "application/json",
       },
     });
-    if (response.ok){
+    if (response.ok) {
       document.location.reload()
     } else {
       alert(res.statusText)
@@ -26,69 +26,69 @@ async function commentForm(event) {
 }
 
 document
-.querySelector('#add-comment')
-.addEventListener('click', commentForm);
+  .querySelector('#add-comment')
+  .addEventListener('click', commentForm);
 
 
 
 const updateCommentForm = async event => {
   event.preventDefault();
-  
-  document.querySelector('input[name = "updated-info"]').value.trim();
- 
-  const postId = window.location.toString().split("/")[
-    window.location.toString().split("/").length -1];
 
-if (comment_text) {
-  const response = await fetch(`/api/comment/${postId}`, {
-    method: "PUT",
-    body: JSON.stringify({
-      postId,
-      comment_text,
-    }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  if(response.ok){
-    document.location.reload()
-  }else{
-    alert(res.statusText)
+  document.querySelector('input[name = "updated-info"]').value.trim();
+
+  const postId = window.location.toString().split("/")[
+    window.location.toString().split("/").length - 1];
+
+  if (comment_text) {
+    const response = await fetch(`/api/comment/${postId}`, {
+      method: "PUT",
+      body: JSON.stringify({
+        postId,
+        comment_text,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (response.ok) {
+      document.location.reload()
+    } else {
+      alert(res.statusText)
+    }
   }
-}
 }
 
 document.querySelector('#update-comment')
-.addEventListener('click', updateCommentForm);
+  .addEventListener('click', updateCommentForm);
 
 
 
 const deleteCommentForm = async event => {
-event.preventDefault();
+  event.preventDefault();
 
-const postId = window.location.toString().split("/")[
-  window.location.toString().split("/").length - 1
-];
+  const postId = window.location.toString().split("/")[
+    window.location.toString().split("/").length - 1
+  ];
 
-if (comment_text) {
-  const response = await fetch(`/api/comment/${postId}`, {
-    method: "DELETE",
-    body: JSON.stringify({
-      postId,
-      comment_text,
-    }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  if (comment_text) {
+    const response = await fetch(`/api/comment/${postId}`, {
+      method: "DELETE",
+      body: JSON.stringify({
+        postId,
+        comment_text,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-  if (response.ok){
-    document.location.replace('/')
-  } else {
-    alert(res.statusText)
+    if (response.ok) {
+      document.location.replace('/')
+    } else {
+      alert(res.statusText)
+    }
   }
-}
 }
 
 document.querySelector('#delete-comment')
-.addEventListener('click', deleteCommentForm)
+  .addEventListener('click', deleteCommentForm)
