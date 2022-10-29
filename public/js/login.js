@@ -13,7 +13,7 @@ const loginForm = async (event) => {
     if (response.ok) {
       document.location.replace("/");
     } else {
-      alert(res.statusText);
+      alert("Failed to login! Try again");
     }
   }
 };
