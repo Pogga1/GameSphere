@@ -1,1 +1,9 @@
 {{>page-setup}}
+
+{{#if loggedIn}}
+<script src="./js/newPost.js"></script>
+<script src="./js/editPost.js"></script>
+<script src="./js/comment.js"></script>
+{{else}}
+<h2>Please log in first!</h2>
+{{/if }}
