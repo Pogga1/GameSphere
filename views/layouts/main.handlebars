@@ -20,11 +20,11 @@
         <a href="/" class="ml-8">Home</a>
         {{#if loggedIn}}
         <button id="logout" class="logout">Logout</button>
-        {{else}}
-        <a href="/login" class="">Login</a>
-        {{/if}}
-        {{#if loggedIn}}
         <script src="/js/logout.js"></script>
+        {{else}}
+        <button id="login" class="login">Login</button>
+        <a href="/login" class="">Login</a>
+        <script src="/js/login.js"></script>
         {{/if}}
     </nav>
     {{{body}}}
