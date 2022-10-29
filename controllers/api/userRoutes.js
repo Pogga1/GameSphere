@@ -18,7 +18,7 @@ router.post("/", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
-  req.body(req.body);
+  console.log(req.body);
   try {
     // Find the user who matches the posted e-mail address
     const userData = await User.findOne({
