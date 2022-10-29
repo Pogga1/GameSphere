@@ -5,20 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Sphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 <link href="/css/style.css" rel = 'stylesheet'>
 </head>
 
 <body id="body">
     <header>
-        <h1 class="flex justify-center text-white text-4xl">Game Sphere</h1>
+        <h1 class=" text-6xl flex md:container md:mx-auto justify-center ">Game Sphere</h1>
     </header>
-    <nav class=" flex justify-start border-b-2 border-white my-4">
-        <a href="/" class="mx-5 my-2 text-white text-2xl border-white border-2 p-1 rounded-xl">Home</a>
+    <nav class=" text-3xl flex space-x-4 ">
+        <a href="/" class="ml-8">Home</a>
         {{#if loggedIn}}
-        <button id="logout" class="mx-2 my-2 text-white text-2xl border-white border-2 p-1 rounded-xl">Logout</button>
+        <button id="logout" class="">Logout</button>
         {{else}}
-        <a href="/login" class="mx-2 my-2 text-white text-2xl border-white border-2 p-1 rounded-xl">Login</a>
+        <a href="/login" class="">Login</a>
         {{/if}}
         {{#if loggedIn}}
         <script src="/js/logout.js"></script>
