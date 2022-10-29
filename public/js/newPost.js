@@ -1,5 +1,4 @@
- 
-const postForm = async event => {
+ const postForm = async event => {
     event.preventDefault();
 
     const post_title = document.querySelector('input[name = "title"]').value;
