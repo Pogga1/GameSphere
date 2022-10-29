@@ -12,16 +12,16 @@
 <link href="/css/style.css" rel = 'stylesheet'>
 </head>
 
-<body id="body">
+<body id="body" >
     <header>
-        <h1 class=" text-6xl flex md:container md:mx-auto justify-center ">Game Sphere</h1>
+        <h1 class="text-6xl flex justify-center ">Game Sphere</h1>
     </header>
-    <nav class=" text-3xl flex space-x-4 ">
-        <a href="/" class="ml-8">Home</a>
+    <nav class=" text-3xl flex space-x-4 border-b-4 my-4 ">
+        <a href="/" class="ml-8 hover:text-white" id="home">Home</a>
         {{#if loggedIn}}
-        <button id="logout" class="logout">Logout</button>
+        <button id="logout" class="logout hover:text-white">Logout</button>
         {{else}}
-        <a href="/login" class="">Login</a>
+        <a href="/login" class="hover:text-white">Login</a>
         {{/if}}
         {{#if loggedIn}}
         <script src="/js/logout.js"></script>
