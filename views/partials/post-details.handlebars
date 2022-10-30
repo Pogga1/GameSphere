@@ -1,10 +1,16 @@
 <section class="card">
-    <a href="/post/{{id}}">
-        {{#each post as |post|}}
-        {{>post-details}}
-        <button id="edit-post">Edit Post</button>
+    {{#each post as |post|}}
+    <a href="/post/{{id}}">{{title}}</a>
+    <p>{{content}}</p>
+    <button id="edit-post">Edit Post</button>
+    <button id="delete-post">Delete Post</button>
+    <p>Posted by: {{user.username}}</p>
+    <p>
+        {{post.comment}}
         <button id="delete-comment">Delete Comment</button>
-        {{/each}}
-        </div>
+        <button id="edit-comment">Edit Comment</button>
+    </p>
+    {{/each}}
+    </div>
     </a>
 </section>

@@ -1,21 +1,21 @@
 <main>
-        <div class="flex justify-around mt-10 underline">
-            <button class="" id="action">Action</button>
-            <button id="adventure">Adventure</button>
-            <button id="horror">Horror</button>
-            <button id="puzzle">Puzzle</button>
-            <button id="mmo">MMO</button>
-            <button id="rpg">RPG</button>
-            <button id="survival">Survival</button>
-        </div>
-        <div class="search my-10 flex justify-center">
-            <input id="search-input" type="text" placeholder="Search...">
-        </div>
-        <div class="post">
-
-            <button id="create-post">Create Post</button>
-        </div>
-    </main>
+    <div class="flex justify-between">
+        <button id="action">Action</button>
+        <button id="adventure">Adventure</button>
+        <button id="horror">Horror</button>
+        <button id="puzzle">Puzzle</button>
+        <button id="mmo">MMO</button>
+        <button id="rpg">RPG</button>
+        <button id="survival">Survival</button>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="post">
+        <button id="create-post">Create Post</button>
+        {{>post-details}}
+    </div>
+</main>
 </body>
 
 <footer class=" flex justify-center absolute inset-x-0 bottom-0 mb-2 space-x-4">
