@@ -7,26 +7,38 @@
 a:hover {
   color: white;
 }
-
-.login-form {
-  display: flex;
-  font-size: 30px;
-  color: #b2f5ea;
-
-
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: transparent;
+#forms{
   margin-top: 200px;
 }
-.signup-form {
-  display: flex;
+
+#login-form{
+  border: solid;
+  border-color: aqua;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.425);
+}
+
+#signup-form{
+  border: solid;
+  border-color: aqua;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.425);
+}
+
+
+.login-form {
   font-size: 30px;
   color: #b2f5ea;
-
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: transparent;
+ 
+}
+.signup-form {
+  font-size: 30px;
+  color: #b2f5ea;
+  padding-top: 10px;
+  padding-bottom: 10px;
+ 
 }
 .form-input {
   display: flex;
@@ -44,4 +56,17 @@ a:hover {
     background-color: rgb(1, 1, 10);
     color: white;
     transition: 1s;
+}
+
+@media screen and (max-width: 480px){
+  
+#forms {
+  display: block;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 }
