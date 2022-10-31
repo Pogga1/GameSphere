@@ -28,9 +28,9 @@
         <a href="/" class="ml-8 underline">Home</a>
         {{#if loggedIn}}
 
-        <button id="logout" class="logout hover:text-white">Logout</button>
+        <button id="logout" class="logout underline hover:text-white">Logout</button>
         {{else}}
-        <a href="/login" class="hover:text-white">Login</a>
+        <a href="/login" class=" underline hover:text-white">Login</a>
         {{/if}}
         {{#if loggedIn}}
         <script src="/js/logout.js"></script>
