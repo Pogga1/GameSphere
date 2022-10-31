@@ -33,12 +33,12 @@
     {{> post-details}}
     {{/each}}
     
-        {{#if loggedIn}}
+        {{#if logged_in}}
         <a href="/create-post" id="create-post" class="hover:text-white ml-5">Create Post</a>
         {{else}}
         <a href="/login" class="underline hover:text-white ml-5">Create Post</a>
         {{/if}}
-        {{#if loggedIn}}
+        {{#if logged_in}}
         <script src="/js/newPost.js"></script>
         {{/if}}
 
