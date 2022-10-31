@@ -2,12 +2,12 @@
 
     <nav class=" text-3xl sm:text-3xl flex space-x-4 ml-5 mt-10">
     
-        {{#if loggedIn}}
+        {{#if logged_in }}
         <button id="logout" class="logout hover:text-white">Logout</button>
         {{else}}
         <a href="/login" id="login" class="logout hover:text-white">Login</a>
         {{/if}}
-        {{#if loggedIn}}
+        {{#if logged_in}}
         <script src="/js/logout.js"></script>
         {{/if}}
     </nav>
@@ -33,12 +33,12 @@
     {{> post-details}}
     {{/each}}
     
-        {{#if loggedIn}}
+        {{#if logged_in}}
         <a href="/create-post" id="create-post" class="hover:text-white ml-5">Create Post</a>
         {{else}}
         <a href="/login" class="underline hover:text-white ml-5">Create Post</a>
         {{/if}}
-        {{#if loggedIn}}
+        {{#if logged_in}}
         <script src="/js/newPost.js"></script>
         {{/if}}
 
