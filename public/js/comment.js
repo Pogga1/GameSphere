@@ -1,10 +1,12 @@
 async function commentForm(event) {
   event.preventDefault();
-  const comment_text = document.querySelector('input[name = "comment-info"]').value.trim();
-
+  const comment_text = document
+    .querySelector('input[name = "comment-info"]')
+    .value.trim();
 
   const postId = window.location.toString().split("/")[
-    window.location.toString().split("/").length - 1];
+    window.location.toString().split("/").length - 1
+  ];
 
   if (comment_text) {
     const response = await fetch(`/api/comment/${postId}`, {
@@ -18,26 +20,23 @@ async function commentForm(event) {
       },
     });
     if (response.ok) {
-      document.location.reload()
+      document.location.reload();
     } else {
-      alert(res.statusText)
+      alert(res.statusText);
     }
   }
 }
 
-document
-  .querySelector('#add-comment')
-  .addEventListener('click', commentForm);
+document.querySelector("#add-comment").addEventListener("click", commentForm);
 
-
-
-const updateCommentForm = async event => {
+const updateCommentForm = async (event) => {
   event.preventDefault();
 
   document.querySelector('input[name = "updated-info"]').value.trim();
 
   const postId = window.location.toString().split("/")[
-    window.location.toString().split("/").length - 1];
+    window.location.toString().split("/").length - 1
+  ];
 
   if (comment_text) {
     const response = await fetch(`/api/comment/${postId}`, {
@@ -51,19 +50,18 @@ const updateCommentForm = async event => {
       },
     });
     if (response.ok) {
-      document.location.reload()
+      document.location.reload();
     } else {
-      alert(res.statusText)
+      alert(res.statusText);
     }
   }
-}
+};
 
-document.querySelector('#update-comment')
-  .addEventListener('click', updateCommentForm);
+document
+  .querySelector("#update-comment")
+  .addEventListener("click", updateCommentForm);
 
-
-
-const deleteCommentForm = async event => {
+const deleteCommentForm = async (event) => {
   event.preventDefault();
 
   const postId = window.location.toString().split("/")[
@@ -83,12 +81,13 @@ const deleteCommentForm = async event => {
     });
 
     if (response.ok) {
-      document.location.replace('/')
+      document.location.replace("/");
     } else {
-      alert(res.statusText)
+      alert(res.statusText);
     }
   }
-}
+};
 
-document.querySelector('#delete-comment')
-  .addEventListener('click', deleteCommentForm)
+document
+  .querySelector("#delete-comment")
+  .addEventListener("click", deleteCommentForm);
