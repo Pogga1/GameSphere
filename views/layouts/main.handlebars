@@ -21,6 +21,7 @@
 </head>
 
 <body id="body" >
+    
     <header>
         <h1 id="header" class="text-4xl lg:text-6xl flex container mx-auto justify-center mt-10 border-2">Game Sphere</h1>
     </header>
@@ -30,7 +31,7 @@
         <a href="/" class="ml-8 underline">Home</a>
         {{#if loggedIn}}
 
-        <button id="logout" class="logout hover:text-white">Logout</button>
+        <button id="logout" class="logout underline hover:text-white">Logout</button>
         {{else}}
         <a href="/login" class="underline hover:text-white">Login</a>
         {{/if}}

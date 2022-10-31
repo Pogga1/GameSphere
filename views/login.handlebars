@@ -1,44 +1,55 @@
-<nav class=" text-xl sm:text-3xl flex space-x-4 mr-5 my-10 lg:my-20 lg:justify-center">
-        <a href="/" class="ml-8 underline">Home</a>
-    </nav>
-
-
-
-
+<nav
+  class="text-xl sm:text-3xl flex space-x-4 mr-5 my-10 lg:my-20 lg:justify-center"
+>
+  <a href="/" class="ml-8 underline">Home</a>
+</nav>
 
 <div id="forms" class="lg:flex relative container mx-auto">
-    <div id="login-form" class="login-form px-5 mb-10">
-        <h2 class="page-title font-bold">Login</h2>
-        <form class="space-y-4 mt-3 text-center">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input class="username-input form-input" type="text" id="username-login" />
-            </div>
-            <div class="form-group">
-                <label for="password-login">Password:</label>
-                <input class="form-input" type="password" id="password-login" />
-            </div>
-            <div class="form-group">
-                <button class="login-buttons" id="login-form" type="submit">login</button>
-            </div>
-        </form>
-    </div>
-    <div id="signup-form" class="signup-form absolute right-0 px-5">
-        <h2 class="page-title font-bold">Signup</h2>
-        <form class="form signup space-y-4 mt-3 text-center">
-            <div class="form-group">
-                <label for="username-signup">Username:</label>
-                <input class="form-input" type="text" id="username-signup" />
-            </div>
-            <div class="form-group">
-                <label for="password-signup">Password:</label>
-                <input class="form-input" type="password" id="password-signup" />
-            </div>
-            <div class="form-group">
-                <button class="login-buttons" id="signup-form" type="submit">signup</button>
-            </div>
-        </form>
-    </div>
+  <div id="login-form" class="login-form px-5 mb-10">
+    <h2 class="page-title font-bold">Login</h2>
+    <form class="space-y-4 mt-3 text-center">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input
+          class="username-input form-input"
+          type="text"
+          id="username-login"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password-login">Password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button
+          class="login-buttons"
+          id="login-form"
+          type="submit"
+        >login</button>
+      </div>
+    </form>
+  </div>
+  <div id="signup-form" class="signup-form absolute right-0 px-5">
+    <h2 class="page-title font-bold">Signup</h2>
+    <form class="form signup space-y-4 mt-3 text-center">
+      <div class="form-group">
+        <label for="username-signup">Username:</label>
+        <input class="form-input" type="text" id="username-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">Password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button
+          class="login-buttons"
+          id="signup-form"
+          type="submit"
+        >signup</button>
+      </div>
+    </form>
+  </div>
 </div>
+
 <script src="./js/login.js"></script>
 <script src="./js/signUp.js"></script>
