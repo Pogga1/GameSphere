@@ -1,49 +1,57 @@
 #body {
-  background-image: url("./images/842353-full-hd-background-images-1920x1080-for-windows-7.jpg");
-  color: #b2f5ea;
+  color: rgb(241, 65, 94);
   font-family: "Montserrat Alternates", sans-serif;
+  background-image: url("./images/awesome-firewatch-wallpaper-2560×1080.jpg");
+  background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+ background-position: center;
 }
 
-#header{
+img {
+  display: flex;
+}
+
+#header {
   max-width: 600px;
   padding: 20px;
   border-radius: 30px;
-  border-color:aqua;
+  border-color: aqua;
 }
 
 a:hover {
   color: white;
 }
 
-#genre-bar{
+#genre-bar {
   background-color: rgba(0, 0, 0, 0.425);
 }
 
-#search-input{
+#search-input {
   background-color: rgba(0, 0, 0, 0.425);
-  border: solid aqua 0.1px;
+  border: solid white 0.1px;
   border-radius: 20px;
   min-height: 50px;
   padding: 0 15px;
 }
 
-h1{
+h1 {
   text-shadow: 5px 5px 10px;
 }
 
 .login-form {
   font-size: 30px;
-  color: #b2f5ea;
+  color: rgb(241, 65, 94);
   padding-top: 10px;
   padding-bottom: 10px;
   border: solid;
   border-color: aqua;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.425)
+  background-color: rgba(0, 0, 0, 0.425);
 }
 .signup-form {
   font-size: 30px;
-  color: #b2f5ea;
+  color: rgb(241, 65, 94);
   padding-top: 10px;
   padding-bottom: 10px;
   border: solid;
@@ -58,45 +66,41 @@ h1{
   border-radius: 20px;
   padding: 0 15px;
 }
-.login-buttons{
-    border: solid aqua 1px;
-    border-radius: 10px;
-    padding-left: 4px;
-    padding-right: 4px;
+.login-buttons {
+  border: solid white 2px;
+  border-radius: 10px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 .button:hover {
-    background-color: rgb(1, 1, 10);
-    color: white;
-    transition: 1s;
+  background-color: rgb(1, 1, 10);
+  color: white;
+  transition: 1s;
 }
 
-@media screen and (max-width: 1030px){
+@media screen and (max-width: 1030px) {
+  header {
+    margin: 0 25px 30px 25px;
+  }
 
-header{
-  margin: 0 25px 30px 25px;
-  
-}
+  #forms {
+    max-width: 300px;
+    margin: auto;
+  }
+  #login-form {
+    max-width: 300px;
+  }
 
-#forms{
-  max-width: 300px;
-  margin: auto;
-}
-#login-form{
-  max-width: 300px;
-}
+  #signup-form {
+    max-width: 300px;
+  }
 
-#signup-form{
-  max-width: 300px;
-}
-
-.form-input{
-  max-width: 250px;
-}
-footer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
+  .form-input {
+    max-width: 250px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
