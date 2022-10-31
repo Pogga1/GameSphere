@@ -4,7 +4,7 @@
         {{#if loggedIn}}
         <button id="logout" class="logout hover:text-white">Logout</button>
         {{else}}
-        <a href="/login" class="underline hover:text-white">Login</a>
+        <a href="/login" id="login" class="logout hover:text-white">Login</a>
         {{/if}}
         {{#if loggedIn}}
         <script src="/js/logout.js"></script>
@@ -14,13 +14,13 @@
 
 
         <div id="genre-bar" class="flex justify-around mt-2 border-2 p-4">
-            <button class="hover:text-white underline" id="action">Action</button>
-            <button class="hover:text-white underline" id="adventure">Adventure</button>
-            <button class="hover:text-white underline" id="horror">Horror</button>
-            <button class="hover:text-white underline" id="puzzle">Puzzle</button>
-            <button class="hover:text-white underline" id="mmo">MMO</button>
-            <button class="hover:text-white underline" id="rpg">RPG</button>
-            <button class="hover:text-white underline" id="survival">Survival</button>
+            <button class="hover:text-white underline" class="action">Action</button>
+            <button class="hover:text-white underline" class="adventure">Adventure</button>
+            <button class="hover:text-white underline" class="horror">Horror</button>
+            <button class="hover:text-white underline" class="puzzle">Puzzle</button>
+            <button class="hover:text-white underline" class="mmo">MMO</button>
+            <button class="hover:text-white underline" class="rpg">RPG</button>
+            <button class="hover:text-white underline" class="survival">Survival</button>
         </div>
 
         <div class=" my-12 flex justify-center">

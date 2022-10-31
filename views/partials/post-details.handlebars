@@ -1,7 +1,7 @@
 <section class="card">
     {{#each post as |post|}}
-    <a href="/post/{{id}}">{{title}}</a>
-    <p>{{content}}</p>
+    <a href="/post/{{id}}">{{post.title}}</a>
+    <p>{{post.content}}</p>
     <button id="edit-post">Edit Post</button>
     <button id="delete-post">Delete Post</button>
     <p>Posted by: {{user.username}}</p>
