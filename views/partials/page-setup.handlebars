@@ -2,12 +2,12 @@
 
     <nav class=" text-3xl sm:text-3xl flex space-x-4 ml-5 mt-10">
     
-        {{#if loggedIn}}
+        {{#if logged_in }}
         <button id="logout" class="logout hover:text-white">Logout</button>
         {{else}}
         <a href="/login" id="login" class="logout hover:text-white">Login</a>
         {{/if}}
-        {{#if loggedIn}}
+        {{#if logged_in}}
         <script src="/js/logout.js"></script>
         {{/if}}
     </nav>
