@@ -12,9 +12,7 @@
         {{/if}}
     </nav>
 
-    {{#each post as |post|}}
-    {{> post-details}}
-    {{/each}}
+    
 
     <div id="genre-bar" class="flex text-3xl justify-around mt-2 border-2 p-4">
         <button class="hover:text-white underline" class="action">Action</button>
@@ -31,7 +29,10 @@
     </div>
     <div class="post">
 
-
+{{#each users as |post|}}
+    {{> post-details}}
+    {{/each}}
+    
         {{#if loggedIn}}
         <a href="/create-post" id="create-post" class="hover:text-white ml-5">Create Post</a>
         {{else}}
