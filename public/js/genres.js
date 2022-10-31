@@ -9,35 +9,35 @@ if (Post.genre = "adventure") {
 
 switch (Post.genre) {
     case adventure:
-        const allElements = document.getElementsByClass('adventure');
-        for (let i = 0; i < allElements.length; i++) {
-            return allElements[i]
+        const adventure = document.getElementsByClass('adventure');
+        for (let i = 0; i < adventure.length; i++) {
+            return adventure[i]
         }
         break;
 
     case horror:
-        const allElements = document.getElementsByClass('horror');
-        for (let i = 0; i < allElements.length; i++) {
-            return allElements[i]
+        const horror = document.getElementsByClass('horror');
+        for (let i = 0; i < horror.length; i++) {
+            return horror[i]
         }
         break;
     case mmo:
-        const allElements = document.getElementsByClass('mmo');
-        for (let i = 0; i < allElements.length; i++) {
-            return allElements[i]
+        const mmo = document.getElementsByClass('mmo');
+        for (let i = 0; i < mmo.length; i++) {
+            return mmo[i]
         }
         break;
     case rpg:
-        const allElements = document.getElementsByClass('rpg');
-        for (let i = 0; i < allElements.length; i++) {
-            return allElements[i]
+        const rpg = document.getElementsByClass('rpg');
+        for (let i = 0; i < rpg.length; i++) {
+            return rpg[i]
         }
         break;
 
     case survival:
-        const allElements = document.getElementsByClass('survival');
-        for (let i = 0; i < allElements.length; i++) {
-            return allElements[i]
+        const survival = document.getElementsByClass('survival');
+        for (let i = 0; i < survival.length; i++) {
+            return survival[i]
         }
         break;
 
