@@ -18,16 +18,16 @@ const seedAll = async () => {
     individualHooks: true,
     returning: true,
   });
-  const comments = await User.bulkCreate(seedComments, {
+  const comments = await Comment.bulkCreate(seedComments, {
     individualHooks: true,
     returning: true,
   });
 
-  await seedUsers();
+  // await seedUsers();
 
-  await seedPosts();
+  // await seedPosts();
 
-  await seedComments();
+  // await seedComments();
 
   process.exit(0);
 };
