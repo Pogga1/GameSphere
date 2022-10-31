@@ -22,20 +22,24 @@
 
 <body id="body" >
     <header>
-        <h1 class=" text-6xl flex md:container md:mx-auto justify-center mt-5">Game Sphere</h1>
+        <h1 id="header" class="text-4xl lg:text-6xl flex container mx-auto justify-center mt-10 border-2">Game Sphere</h1>
     </header>
-    <nav class=" text-3xl flex space-x-4 justify-end mr-10">
+
+
+    {{!-- <nav class=" text-xl sm:text-2xl flex space-x-4 justify-end mr-10">
         <a href="/" class="ml-8 underline">Home</a>
         {{#if loggedIn}}
 
         <button id="logout" class="logout underline hover:text-white">Logout</button>
         {{else}}
-        <a href="/login" class=" underline hover:text-white">Login</a>
+        <a href="/login" class="underline hover:text-white">Login</a>
         {{/if}}
         {{#if loggedIn}}
         <script src="/js/logout.js"></script>
 
         {{/if}}
-    </nav>
+    </nav> --}}
+
+
     {{{body}}}
 </html>

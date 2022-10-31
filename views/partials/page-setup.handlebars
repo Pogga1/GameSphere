@@ -1,24 +1,51 @@
 <main>
-    <div class="flex justify-between">
-        <button id="action">Action</button>
-        <button id="adventure">Adventure</button>
-        <button id="horror">Horror</button>
-        <button id="puzzle">Puzzle</button>
-        <button id="mmo">MMO</button>
-        <button id="rpg">RPG</button>
-        <button id="survival">Survival</button>
-    </div>
-    <div class="search">
-        <input type="text" placeholder="Search...">
-    </div>
-    <div class="post">
-        <button id="create-post">Create Post</button>
-        {{>post-details}}
-    </div>
-</main>
+    <nav class=" text-xl sm:text-2xl flex space-x-4 ml-5 mt-10">
+    
+        {{#if loggedIn}}
+        <button id="logout" class="logout hover:text-white">Logout</button>
+        {{else}}
+        <a href="/login" class="underline hover:text-white">Login</a>
+        {{/if}}
+        {{#if loggedIn}}
+        <script src="/js/logout.js"></script>
+        {{/if}}
+    </nav>
+
+
+
+        <div id="genre-bar" class="flex justify-around mt-2 border-2 p-4">
+            <button class="hover:text-white underline" id="action">Action</button>
+            <button class="hover:text-white underline" id="adventure">Adventure</button>
+            <button class="hover:text-white underline" id="horror">Horror</button>
+            <button class="hover:text-white underline" id="puzzle">Puzzle</button>
+            <button class="hover:text-white underline" id="mmo">MMO</button>
+            <button class="hover:text-white underline" id="rpg">RPG</button>
+            <button class="hover:text-white underline" id="survival">Survival</button>
+        </div>
+
+        <div class=" my-12 flex justify-center">
+            <input id="search-input" type="text" placeholder="Search...">
+        </div>
+        <div class="post">
+
+
+{{#if loggedIn}}
+        <a href="/create-post" id="create-post" class="hover:text-white ml-5">Create Post</a>
+        {{else}}
+        <a href="/login" class="underline hover:text-white ml-5">Create Post</a>
+        {{/if}}
+        {{#if loggedIn}}
+        <script src="/js/newPost.js"></script>
+        {{/if}}
+
+
+            {{!-- <button id="create-post">Create Post</button> --}}
+        </div>
+    </main>
 </body>
-<footer class=" flex justify-center">
-    <h2>The Creators</h2>
+
+<footer class=" flex justify-center absolute inset-x-0 bottom-0 mb-2 space-x-4">
+    <h2>The Creators:</h2>
 
     <a href="https://github.com/Pogga1">Andrew</a>
 
