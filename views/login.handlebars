@@ -1,9 +1,17 @@
-<div id="forms" class="flex relative container mx-auto">
-    <div id="login-form" class="login-form px-5">
+<nav class=" text-xl sm:text-3xl flex space-x-4 mr-5 my-10 lg:my-20 lg:justify-center">
+        <a href="/" class="ml-8 underline">Home</a>
+    </nav>
+
+
+
+
+
+<div id="forms" class="lg:flex relative container mx-auto">
+    <div id="login-form" class="login-form px-5 mb-10">
         <h2 class="page-title font-bold">Login</h2>
         <form class="space-y-4 mt-3 text-center">
             <div class="form-group">
-                <label for="username">username:</label>
+                <label for="username">Username:</label>
                 <input class="username-input form-input" type="text" id="username-login" />
             </div>
             <div class="form-group">
@@ -11,7 +19,7 @@
                 <input class="form-input" type="password" id="password-login" />
             </div>
             <div class="form-group">
-                <button class="button" id="login-form" type="submit">login</button>
+                <button class="login-buttons" id="login-form" type="submit">login</button>
             </div>
         </form>
     </div>
@@ -27,7 +35,7 @@
                 <input class="form-input" type="password" id="password-signup" />
             </div>
             <div class="form-group">
-                <button class="button" id="signup-form" type="submit">signup</button>
+                <button class="login-buttons" id="signup-form" type="submit">signup</button>
             </div>
         </form>
     </div>
