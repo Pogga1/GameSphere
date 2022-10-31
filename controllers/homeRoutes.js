@@ -46,5 +46,20 @@ router.get("/post/:id", async (req, res) => {
   }
 });
 
+router.get("/post/:genre", async (req, res) => {
+  try{
+    const postGenre = await post.findByPK(req.params.genre, {
+      include: [
+        { model: User, attributes: ["username"] },
+        { model: Comment, include: [User] },
+      ],
+    });
+    const post = postGenre.get({ plain: true });
+    res.render("post", { ...post, logged_in: req.session.logged_in });
+  } catch (err) {
+    res.status(500).JSON(err);
+  }
+});
+
 
 module.exports = router;
