@@ -1,6 +1,6 @@
 <main>
     <nav class=" text-xl sm:text-2xl flex space-x-4 ml-5 mt-10">
-    
+
         {{#if loggedIn}}
         <button id="logout" class="logout hover:text-white">Logout</button>
         {{else}}
@@ -11,25 +11,27 @@
         {{/if}}
     </nav>
 
+    {{#each post as |post|}}
+    {{> post-details}}
+    {{/each}}
+
+    <div id="genre-bar" class="flex justify-around mt-2 border-2 p-4">
+        <button class="hover:text-white underline" class="action">Action</button>
+        <button class="hover:text-white underline" class="adventure">Adventure</button>
+        <button class="hover:text-white underline" class="horror">Horror</button>
+        <button class="hover:text-white underline" class="puzzle">Puzzle</button>
+        <button class="hover:text-white underline" class="mmo">MMO</button>
+        <button class="hover:text-white underline" class="rpg">RPG</button>
+        <button class="hover:text-white underline" class="survival">Survival</button>
+    </div>
+
+    <div class=" my-12 flex justify-center">
+        <input id="search-input" type="text" placeholder="Search...">
+    </div>
+    <div class="post">
 
 
-        <div id="genre-bar" class="flex justify-around mt-2 border-2 p-4">
-            <button class="hover:text-white underline" class="action">Action</button>
-            <button class="hover:text-white underline" class="adventure">Adventure</button>
-            <button class="hover:text-white underline" class="horror">Horror</button>
-            <button class="hover:text-white underline" class="puzzle">Puzzle</button>
-            <button class="hover:text-white underline" class="mmo">MMO</button>
-            <button class="hover:text-white underline" class="rpg">RPG</button>
-            <button class="hover:text-white underline" class="survival">Survival</button>
-        </div>
-
-        <div class=" my-12 flex justify-center">
-            <input id="search-input" type="text" placeholder="Search...">
-        </div>
-        <div class="post">
-
-
-{{#if loggedIn}}
+        {{#if loggedIn}}
         <a href="/create-post" id="create-post" class="hover:text-white ml-5">Create Post</a>
         {{else}}
         <a href="/login" class="underline hover:text-white ml-5">Create Post</a>
@@ -39,9 +41,9 @@
         {{/if}}
 
 
-            {{!-- <button id="create-post">Create Post</button> --}}
-        </div>
-    </main>
+        {{!-- <button id="create-post">Create Post</button> --}}
+    </div>
+</main>
 </body>
 
 <footer class=" flex justify-center absolute inset-x-0 bottom-0 mb-2 space-x-4">

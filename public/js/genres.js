@@ -16,16 +16,29 @@ switch (Post.genre) {
         break;
 
     case horror:
-
+        const allElements = document.getElementsByClass('horror');
+        for (let i = 0; i < allElements.length; i++) {
+            return allElements[i]
+        }
         break;
     case mmo:
-
+        const allElements = document.getElementsByClass('mmo');
+        for (let i = 0; i < allElements.length; i++) {
+            return allElements[i]
+        }
         break;
     case rpg:
-
+        const allElements = document.getElementsByClass('rpg');
+        for (let i = 0; i < allElements.length; i++) {
+            return allElements[i]
+        }
         break;
-    case survival:
 
+    case survival:
+        const allElements = document.getElementsByClass('survival');
+        for (let i = 0; i < allElements.length; i++) {
+            return allElements[i]
+        }
         break;
 
     default:

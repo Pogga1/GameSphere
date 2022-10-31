@@ -4,10 +4,10 @@ const withAuth = require("../../utils/auth");
 
 router.post("/", /*withAuth,*/ async (req, res) => {
   try {
-    const newPost = await Post.create({
+    const newPost = await Post.findByPk(req.body,{
       include: [
         {
-          model: Post,
+         
           attributes: [
             "title",
             "content",
@@ -18,7 +18,10 @@ router.post("/", /*withAuth,*/ async (req, res) => {
       // ...req.body,
       user_id: req.session.user_id,
     });
-    res.status(200).json(newPost);
+    const random = newPost.get({
+      plain: true
+    })
+    res.status(200).json(random);
   } catch (err) {
     res.status(404).json(err);
   }
