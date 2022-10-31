@@ -27,10 +27,10 @@
     </div>
     <div class="post">
 
-        {{#each users as |post|}}
-        {{> post-details}}
-        {{/each}}
-
+{{#each users as |post|}}
+    {{> post-details}}
+    {{/each}}
+    
         {{#if logged_in}}
         <a href="/create-post" id="create-post" class="hover:text-white ml-5">Create Post</a>
         <script src="/js/newPost.js"></script>
