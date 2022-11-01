@@ -1,18 +1,18 @@
 <main>
 
-    <nav class=" text-3xl sm:text-3xl flex space-x-4 ml-5 mt-10">
+    <nav class=" text-3xl flex space-x-4 ml-5 mt-10">
 
         {{#if logged_in}}
         <button id="logout" class="logout hover:text-white">Logout</button>
         <script src="/js/logout.js"></script>
         {{else}}
-        <button><a href="/login" id="login" class="logout hover:text-white">Login</a></button>
+        <button><a href="/login" id="login" class="logout hover:text-white underline">Login</a></button>
         {{/if}}
     </nav>
 
 
 
-    <div id="genre-bar" class="flex text-3xl justify-around mt-2 border-2 p-4">
+    <div id="genre-bar" class="flex lg:text-3xl justify-around mt-2 border-2 p-4">
         <a href="/genre" <button class="hover:text-white underline" class="action">Action</button> </a>
         <a href="/genre" <button class="hover:text-white underline" class="adventure">Adventure</button></a>
         <a href="/genre" <button class="hover:text-white underline" class="horror">Horror</button></a>
@@ -25,27 +25,29 @@
     <div class=" my-12 flex justify-center">
         <input id="search-input" type="text" placeholder="Search...">
     </div>
-    <div class="post">
-
-{{#each users as |post|}}
-    {{> post-details}}
-    {{/each}}
-    
+    <div class="mb-4">
         {{#if logged_in}}
-        <a href="/create-post" id="create-post" class="hover:text-white ml-5">Create Post</a>
+        <a href="/create-post" id="create-post" class="underline text-xl hover:text-white ml-64 font-bold">Create Post</a>
         <script src="/js/newPost.js"></script>
         {{else}}
-        <a href="/login" class="underline hover:text-white ml-5">Create Post</a>
+        <a href="/login" class="underline text-xl hover:text-white ml-64 font-bold">Create Post</a>
         {{/if}}
-
-
-        {{!-- <button id="create-post">Create Post</button> --}}
+    </div>
+    
+    <div class="post-area">
+        <div class="my-2">
+            <div>
+                {{#each users as |post|}}
+                {{> post-details}}
+                {{/each}}
+            </div>
+        </div>
     </div>
 </main>
 <script src="/js/genres.js"></script>
 </body>
 
-<footer class=" flex text-2xl justify-center absolute inset-x-0 bottom-0 mb-2 space-x-4">
+<footer>
     <h2>The Creators:</h2>
 
     <a href="https://github.com/Pogga1" target="_blank">Andrew</a>

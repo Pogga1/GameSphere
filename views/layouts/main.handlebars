@@ -20,13 +20,13 @@
     <link href="/css/style.css" rel='stylesheet'>
 </head>
 
-<body id="body" >
+<body id="body" class="mx-3">
     
     <header>
         <h1 id="header" class="text-4xl lg:text-6xl flex container mx-auto justify-center mt-10 border-2">Game Sphere</h1>
     </header>
 
-    <nav class=" text-xl sm:text-2xl flex space-x-4 justify-end mr-10">
+    {{!-- <nav class=" text-xl sm:text-2xl flex space-x-4 justify-end mr-10">
         <a href="/" class="ml-8 underline">Home</a>
         {{#if logged_in}}
         <button id="logout" class="logout underline hover:text-white">Logout</button>
@@ -34,6 +34,6 @@
         <a href="/login" class="underline hover:text-white">Login</a>
         <script src="/js/logout.js"></script>
         {{/if}}
-    </nav>
+    </nav> --}}
     {{{body}}}
 </html>
