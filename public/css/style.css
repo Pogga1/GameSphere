@@ -17,6 +17,8 @@ img {
   padding: 20px;
   border-radius: 30px;
   border-color: aqua;
+  background-color: rgba(241, 65, 94, 0.11);
+  text-shadow: 5px 5px 10px;
 }
 
 a:hover {
@@ -28,6 +30,7 @@ a:hover {
 }
 
 #search-input {
+  color: aqua;
   background-color: rgba(0, 0, 0, 0.425);
   border: solid white 0.1px;
   border-radius: 20px;
@@ -35,9 +38,41 @@ a:hover {
   padding: 0 15px;
 }
 
-h1 {
-  background-color: rgba(241, 65, 94, 0.11);
-  text-shadow: 5px 5px 10px;
+.post-area{
+  background-color: rgba(149, 50, 67, 0.403);
+  flex-direction: column;
+  align-items: center;
+  max-width: 70%;
+  margin: auto;
+  padding: 15px;
+  border: solid blue 2px;
+  border-radius: 20px;
+}
+
+.post{
+  color: aqua;
+  background-color: rgba(0, 0, 0, 0.501);
+  flex-direction: column;
+  align-items: center;
+  max-width: 98%;
+  padding: 15px;
+  border: solid aqua 1px;
+  border-radius: 20px;
+}
+
+.buttons {
+  border: solid white 1px;
+  border-radius: 10px;
+  padding: 0 8px;
+}
+.post-buttons{
+  border-radius: 10px;
+  padding-left: 4px;
+  padding-right: 4px;
+  max-width: 300px;
+  margin:auto;
+  text-align: center;
+  margin-top: 15px;
 }
 
 .login-form {
@@ -61,6 +96,7 @@ h1 {
   background-color: rgba(0, 0, 0, 0.425);
 }
 .form-input {
+  color: aqua;
   display: flex;
   background-color: transparent;
   border: solid white 0.1px;
@@ -68,11 +104,12 @@ h1 {
   padding: 0 15px;
 }
 .login-buttons {
-  border: solid white 2px;
+  border: solid aqua 1px;
   border-radius: 10px;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding: 0 8px;
 }
+
+
 .button:hover {
   background-color: rgb(1, 1, 10);
   color: white;
