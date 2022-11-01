@@ -4,19 +4,19 @@ async function commentForm(event) {
     .querySelector('input[name = "comment-info"]')
     .value.trim();
 
-  const postId = window.location.toString().split("/")[
-    window.location.toString().split("/").length - 1
+  const postId = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1
   ];
 
   if (comment_text) {
     const response = await fetch(`/api/comment/${postId}`, {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify({
         postId,
         comment_text,
       }),
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     });
     if (response.ok) {
@@ -27,26 +27,26 @@ async function commentForm(event) {
   }
 }
 
-document.querySelector("#add-comment").addEventListener("click", commentForm);
+document.querySelector('#add-comment').addEventListener('click', commentForm);
 
 const updateCommentForm = async (event) => {
   event.preventDefault();
 
   document.querySelector('input[name = "updated-info"]').value.trim();
 
-  const postId = window.location.toString().split("/")[
-    window.location.toString().split("/").length - 1
+  const postId = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1
   ];
 
   if (comment_text) {
     const response = await fetch(`/api/comment/${postId}`, {
-      method: "PUT",
+      method: 'PUT',
       body: JSON.stringify({
         postId,
         comment_text,
       }),
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     });
     if (response.ok) {
@@ -57,31 +57,29 @@ const updateCommentForm = async (event) => {
   }
 };
 
-document
-  .querySelector("#update-comment")
-  .addEventListener("click", updateCommentForm);
+document.querySelector('#update-comment').addEventListener('click', updateCommentForm);
 
 const deleteCommentForm = async (event) => {
   event.preventDefault();
 
-  const postId = window.location.toString().split("/")[
-    window.location.toString().split("/").length - 1
+  const postId = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1
   ];
 
   if (comment_text) {
     const response = await fetch(`/api/comment/${postId}`, {
-      method: "DELETE",
+      method: 'DELETE',
       body: JSON.stringify({
         postId,
         comment_text,
       }),
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace('/');
     } else {
       alert(res.statusText);
     }
@@ -89,5 +87,5 @@ const deleteCommentForm = async (event) => {
 };
 
 document
-  .querySelector("#delete-comment")
-  .addEventListener("click", deleteCommentForm);
+  .querySelector('#delete-comment')
+  .addEventListener('click', deleteCommentForm);

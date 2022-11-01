@@ -5,7 +5,11 @@
         "name": "Run gamesphere",
         "request": "launch",
         "type": "node-terminal",
-        "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}",
+        "skipFiles": [
+            "<node_internals>/**",
+            "node.js"
+        ]
     }
     ]
 }
