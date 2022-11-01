@@ -51,7 +51,7 @@ router.get("/post/:id", async (req, res) => {
 
 router.get("/create-post", async (req, res) => {
   try {
-    const userData = await User.findByPk(1, {
+    const userData = await User.findByPk(req.user.id, {
       include: [
         { model: User, attributes: ["username"] },
         { model: Comment, include: [Post] },
