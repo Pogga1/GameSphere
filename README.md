@@ -17,9 +17,10 @@
 * [Technologies used](#Technologies Used)
 * [Questions](#questions)
 # Installation
-![Screenshot 2022-10-31 145603](https://user-images.githubusercontent.com/112588710/199118082-1ef239a1-bb82-4ae1-beeb-6e17e512550a.png)
-![Screenshot 2022-10-31 145536](https://user-images.githubusercontent.com/112588710/199118091-67b20aba-8a10-407a-b95f-49a06abf356e.png)
-![Screenshot 2022-10-31 145521](https://user-images.githubusercontent.com/112588710/199118096-7874b603-40e8-47a2-9353-0d0bd2bcad2f.png)
+![1](https://user-images.githubusercontent.com/112588710/199295663-b944c3b0-2972-426f-b0c7-08a216cc4850.png)
+![2](https://user-images.githubusercontent.com/112588710/199295684-6554539e-5671-4cfa-a7df-13b51b9077c4.png)
+![Screenshot 2022-11-01 101657](https://user-images.githubusercontent.com/112588710/199295698-d679d4f0-f3d8-4a08-acd0-d2819dcf162c.png)
+
 
 * there are no steps involved to install this webpage
 * Just type the link into your browser
