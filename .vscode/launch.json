@@ -1,0 +1,15 @@
+{
+    "configurations": [
+    {
+        "command": "node server.js",
+        "name": "Run gamesphere",
+        "request": "launch",
+        "type": "node-terminal",
+        "cwd": "${workspaceFolder}",
+        "skipFiles": [
+            "<node_internals>/**",
+            "node.js"
+        ]
+    }
+    ]
+}
