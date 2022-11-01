@@ -36,6 +36,7 @@ a:hover {
 }
 
 h1 {
+  background-color: rgba(241, 65, 94, 0.11);
   text-shadow: 5px 5px 10px;
 }
 
@@ -79,6 +80,7 @@ h1 {
 }
 
 @media screen and (max-width: 1030px) {
+
   header {
     margin: 0 25px 30px 25px;
   }
