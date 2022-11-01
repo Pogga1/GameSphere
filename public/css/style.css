@@ -36,6 +36,7 @@ a:hover {
   border-radius: 20px;
   min-height: 50px;
   padding: 0 15px;
+  width: 350px;
 }
 
 .post-area{
@@ -58,6 +59,7 @@ a:hover {
   padding: 15px;
   border: solid aqua 1px;
   border-radius: 20px;
+  box-shadow: 0px 0px 5px 4px;
 }
 
 .buttons {
